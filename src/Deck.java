@@ -11,7 +11,7 @@ import java.util.*;
 public class Deck
 {
     private ArrayList<Card> deck;       //arraylist to store cards of deck, easy to manipulate
-    private int topValue;               //
+    private int topValue;               //the int value of the top card
 
     /**
      * Default constructor. Populates a 52 card deck with the correct cards.

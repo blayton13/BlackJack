@@ -62,10 +62,6 @@ public class Driver {
 
             }
 
-            /*while loop to getTopCard the cards the the dealer. deals more cards while the total is less than 17
-            while(cpu.getTotal()<17) cpu.add(myDeck.getTopCard());
-            System.out.println("CPU's hand:\n"+cpu.toString());*/
-
             //displays totals of player and dealer hands
             System.out.println("\nShow totals:");
             System.out.println("Player's total = " + player.getTotal() + " with " + player.cardsInHand() + " cards.");
