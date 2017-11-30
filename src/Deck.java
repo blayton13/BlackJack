@@ -1,6 +1,6 @@
 /**
  * This class holds a deck. The default constructor populates a 52 card deck with the proper card numbers, faces, and suits. There are methods that allow the user to access and mutate the
- * deck including the ability to shuffle and deal.
+ * deck including the ability to shuffle and getTopCard.
  *
  * @author Blayton Thomas
  * @version 11/28/17
@@ -25,19 +25,29 @@ public class Deck
     }
 
     /**
-     * This method shuffles the Arraylist deck in order to get a less predictable deal
+     * This method shuffles the Arraylist deck in order to get a less predictable getTopCard
      */
     public void shuffle(){
-        Collections.shuffle(deck);
+        Random rand = new Random();
+        int cardOneLocation;
+        int cardTwoLocation;
+        Card temp;
+        for(int x=0; x<1000; x++){
+            cardOneLocation=rand.nextInt(51)+1;
+            cardTwoLocation=rand.nextInt(51)+1;
+            temp = deck.get(cardOneLocation);
+            deck.set(cardOneLocation,deck.get(cardTwoLocation));
+            deck.set(cardTwoLocation,temp);
+        }
         topValue=deck.get(0).getValue();
     }
 
     /**
-     * The deal method returns a card that comes off the top of the deck. When a card is taken from the top, it is placed at the bottom
+     * The getTopCard method returns a card that comes off the top of the deck. When a card is taken from the top, it is placed at the bottom
      *
      * @return Card from the top of the deck
      */
-    public Card deal(){
+    public Card getTopCard(){
         Card temp = deck.get(0);
         deck.remove(0);
         deck.add(temp);

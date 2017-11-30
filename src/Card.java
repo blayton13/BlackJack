@@ -61,6 +61,17 @@ public class Card
     }
 
     /**
+     * Compare to method to determine if a card's value is greater than another.
+     * @param other Card reference to compare the give Card to
+     * @return returns 1 if greater, -1 if lesser, 0 if equal.
+     */
+    public int compareTo(Card other){
+        if(this.getValue()>other.getValue()) return 1;
+        else if(this.getValue()<other.getValue()) return -1;
+        else return 0;
+    }
+
+    /**
      * Takes suit character and returns string representing the normal card suits. Makes toString easier to read
      * @return String representing suit
      */
