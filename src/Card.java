@@ -15,7 +15,7 @@ public class Card
 
     /**
      * Default constructor for Card class
-     * sets fields to default values that aren't real cards
+     * sets  fields to default values that aren't real cards
      */
     public Card(){
         face='x';
